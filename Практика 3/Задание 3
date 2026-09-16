@@ -1,0 +1,19 @@
+print("Введите числа:")
+try:
+    num1 = int(input())
+    print("Вы ввели число")
+except ValueError:
+    #Если возникла ошибка ValueError:
+    print("Ошибка, вы ввели не число или ввели дробное число")
+
+try:
+     num2 = int(input())
+     print("Вы ввели число")
+except ValueError:
+    # Если возникла ошибка ValueError:
+     print("Ошибка, вы ввели не число или ввели дробное число")
+#Сумма
+Sum = num1 + num2
+
+#Вывод
+print(Sum)
