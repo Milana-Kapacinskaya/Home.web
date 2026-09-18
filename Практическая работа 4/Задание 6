@@ -1,0 +1,17 @@
+#Ввод угла
+x = float(input())
+
+#Примечание, перевод угла в радианы
+import math
+ran = math.radians(x)
+
+#Вычесление синуса, косинуса, тангенса
+sin_x = math.sin(ran)
+cos_x = math.cos(ran)
+tg_x = math.tan(ran)
+
+#Вычесление триг.выражения
+sum = sin_x + cos_x + tg_x
+
+#Вывод на экран
+print(sum)
