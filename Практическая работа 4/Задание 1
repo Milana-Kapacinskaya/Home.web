@@ -1,0 +1,12 @@
+#Ввод числа
+print("Введите число:")
+num = float(input())
+
+#Примечание к числам
+import math
+x_1 = math.floor(num)
+x_2 = math.ceil(num)
+
+#Вычисление
+S = x_1 + x_2
+print(S)
