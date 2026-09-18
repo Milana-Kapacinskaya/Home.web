@@ -1,0 +1,9 @@
+print("Введите координаты точки а и b")
+x1 = float(input())
+y1 = float(input())
+x2 = float(input())
+y2 = float(input())
+
+import math
+d = math.sqrt(pow((x2-x1),2)+pow((y2-y1),2))
+print(d)
