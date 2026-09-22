@@ -1,0 +1,12 @@
+NALOG_STAV = 0.13
+
+#Ввод суммы годового дохода
+year_sum = float(input("Введите общую сумму дохода:"))
+
+#Вычисление суммы на нолога и дохода после вычета налога
+sum_nalog = year_sum * NALOG_STAV
+year_sum_after_nalog = year_sum - NALOG_STAV
+
+#Вывод сумм
+print(f"Сумма рассчитанного налога: {sum_nalog:,.2f} рублей")
+print(f"Сумма (на руки) после вычета налога: {year_sum_after_nalog:,.2f} рублей")
