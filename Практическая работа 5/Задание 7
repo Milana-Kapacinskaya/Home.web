@@ -1,0 +1,11 @@
+MONEY_IN_LITRE = 49.5
+# Калькулятор поездки на такси
+#Ввод данных
+distance = float(input("Введите расстояние, которое хотите проехать в км:"))
+litre = float(input("Введите сколько литров ест ваша машина на 100 км:"))
+#Расчет данных
+total_litre = distance * (litre/100)
+total_money = total_litre * MONEY_IN_LITRE
+#Вывод данных
+print(f"Чтобы проехать {distance} километров нужно {total_litre:.2f} литров.")
+print(f"Стоимость за {total_litre} литров равна {total_money:.2f} рублей.")
