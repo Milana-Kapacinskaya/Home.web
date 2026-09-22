@@ -1,0 +1,17 @@
+USD_TO_RUB = 84.1
+#Функция перевода из доллоров в рубли
+def convert_usd_to_rub (amount_usd):
+    """
+    Функция создана для перевода доллоров в рубли, при входе она получает
+    (amount_usd) сумму в доллорах, далее она выполняет перевод в рубли sum_rub, учитывая
+    константу USD_TO_RUB и выводит результат return sum_rub - сумму в рублях
+    """
+    sum_rub = amount_usd * USD_TO_RUB
+    return sum_rub
+
+#Ввод суммы в доллорах и вызов функции
+usd_sum = int(input("Введите сумму в доллорах:"))
+rub_sum = convert_usd_to_rub (usd_sum)
+
+#Вывод суммы в рублях
+print("Сумма в рублях:", rub_sum)
