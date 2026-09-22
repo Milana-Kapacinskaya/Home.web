@@ -1,0 +1,28 @@
+import math
+#Запуск функций
+def calculate_side (x1, y1, x2, y2):
+    """
+    Функция принмает значение координат точки и пролизводит вычисление длины стороны
+    side, после чего выводит результат  return side
+    """
+    side = math.sqrt(pow((x2 - x1), 2) + pow((y2 - y1), 2))
+    return side
+def calculate_area_triangle (side_1, side_2, side_3,poly_P):
+    """
+     Функция принимает значение длин сторон и производит вычисление площади треугольника
+     по формуле Герона, после чего выводит результат полученной площади return area_triangle
+    """
+    area_triangle = math.sqrt(poly_P * (poly_P-side_1) * (poly_P-side_2) * (poly_P-side_3))
+    return area_triangle
+#Ввод данных и вычисление сторон треугольника с помощью функции calculate_side
+x1, y1 = map(float, input("Введите координаты точки A (х у):").split())
+x2, y2 = map(float, input("Введите координаты точки B (х у):").split())
+x3, y3 = map(float, input("Введите координаты точки C (х у):").split())
+side_1 = calculate_side(x1, y1, x2, y2)
+side_2 = calculate_side(x2, y2, x3, y3)
+side_3 = calculate_side(x1, y1, x3, y3)
+poly_P = (side_1 + side_2 +side_3)/2
+#Вычисление площади треугольника с помощью функции
+area_triangle_1 = calculate_area_triangle(side_1, side_2, side_3, poly_P)
+#Вывод значения площади треугольника на экран
+print(f"Площадь треуголька: {area_triangle_1:.2f}")
