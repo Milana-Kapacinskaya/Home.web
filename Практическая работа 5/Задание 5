@@ -1,0 +1,22 @@
+B5000 = 5000
+B1000 = 1000
+B500 = 500
+B200 = 200
+B100 = 100
+#Ввод количества денег для снятия через банкомат
+money_my = int(input("Введите сумму, которую хотите снять, кратную 100:"))
+
+#Вычисление банкомата, сколько выдать денег
+money_my_5000 = money_my // 5000
+money_my_ost_1 = money_my % 5000
+money_my_1000 = money_my_ost_1 // 1000
+money_my_ost_2 = money_my_ost_1 % 1000
+money_my_500 = money_my_ost_2 // 500
+money_my_ost_3 = money_my_ost_2 % 500
+money_my_200 = money_my_ost_3 // 200
+money_my_ost_4 = money_my_ost_3 % 200
+money_me_100 = money_my_ost_4 // 100
+
+#Вывод, выдача средств по количеству купюр 
+print(f"Банкомат выдаст В5000 по {money_my_5000} штук, В1000 по {money_my_1000} штук, В500 по {money_my_500} штук,"
+      f"В200 по {money_my_200} штук, В100 по {money_me_100} штук")
