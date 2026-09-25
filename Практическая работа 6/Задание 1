@@ -1,0 +1,11 @@
+#Ввод данных для анализа состояния
+print("Введите следующие данные для анализа состояния")
+temperature, pressure, pulse = float(input("Ваша температура:")), int(input("Ваше давление:")), int(input("Ваш пульс:"))
+
+#Проверка состояния
+if 36 <= temperature <= 37 and (110 <= pressure <=130)and (60 <= pulse <= 100):
+    print("У вас нормальное состояние")
+elif 35 <= temperature <= 38 and 105<= pressure <=140  and (55 <= pulse <=110):
+    print ("У вас легкое недомогание")
+else:
+    print("Вызывайте врача!")
