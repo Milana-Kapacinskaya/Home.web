@@ -1,0 +1,11 @@
+#Вводим коодинаты клеток на шахматной доске
+num_post_1, num_line_1 = map(int, input("Введите номер столбца и строки, где стоит слон от 1 до 8:").split())
+num_post_2, num_line_2 = map(int, input("Введите номер столбца и строки, куда хочет попасть слон от 1 до 8:").split())
+
+#Проверяем ход слона
+if not (1 <= num_post_1 <= 8) or not (1 <= num_line_1 <= 8) or not (1 <= num_post_2 <= 8) or not (1 <= num_line_2 <= 8):
+    print("Вы ввели число не входящее в диапазон от 1 до 8")
+elif num_post_1 - num_post_2 == num_line_1 - num_line_2:
+    print("YES")
+else:
+    print("NO")
