@@ -1,0 +1,47 @@
+import random
+#Ввод статуса заказа
+status = input("Введите статус вашего заказа (pending, processing, shipped, delivered, cancelled): ")
+
+#Определение статуса заказа
+match status:
+    case "pending":
+        status_delivery = "В ожидании"
+        emoji = "⌛"
+        description = "Ваш заказ ожидает подтверждения"
+        time_delivery = f" {random.randint (1, 2)} дня"
+        recommendations = "Проверьте детали заказ"
+    case "processing":
+        status_delivery = "В обработке"
+        emoji = "⚙️"
+        description = "Ваш заказ собирается продавцом"
+        time_delivery = f" {random.randint(1, 4)} дня"
+        recommendations = "Ожижайте обновление статуса"
+    case "shipped":
+        status_delivery = "Отправлено"
+        emoji = "🚚"
+        description = "Ваш отправлен в пути к вам"
+        time_delivery = f" {random.randint(2, 4)} дня"
+        recommendations = "Следите за уведомлениями о доставке"
+    case "delivered":
+        status_delivery = "Доставлено"
+        emoji = "✅"
+        description = "Ваш заказ прибыл на пункт выдачи"
+        time_delivery = "Доставлено"
+        recommendations = "Скорее забените товар, обязательно проверьте его качество"
+    case "cancelled":
+        status_delivery = "Отменено"
+        emoji = "❌"
+        description = "Ваш заказ был отменен"
+        time_delivery = "-"
+        recommendations = "Свяжитесь с поддержкой"
+    case _:
+        print(f"❌ Ошибка: Неизвестный статус {status}"
+              f"Доступные статусы: pending, processing, shipped, delivered, cancelled")
+#Красивый вывод на экран
+print("=" * 40)
+print(f"    📦 СТАТУС ВАШЕГО ЗАКАЗА 📦")
+print("=" *40 )
+print(f"Статус: {status_delivery} {emoji}")
+print(f"Описание: {description}")
+print(f"Примерное время: {time_delivery}")
+print(f"Рекомендации: {recommendations}")
