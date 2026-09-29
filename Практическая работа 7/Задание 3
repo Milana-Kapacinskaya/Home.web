@@ -1,0 +1,79 @@
+MONEY_ONE_COFFEE = 120
+MONEY_ONE_TEA = 80
+MONEY_ONE_JUICE = 100
+MONEY_ONE_WATER = 50
+MONEY_ONE_LEMONADE = 90
+
+name_drink = input("Введите название напитка (кофе, чай, сок, вода, лимонад) или его номер (от 1 до 5): ")
+quantity_drink = int(input("Введите количество напитков: "))
+discount = input("Введите код скидки (student или retiree), если относитесь к этой категории, если нет, поставьте пробел: ")
+
+#Определение напитка
+match name_drink:
+    case "1" | "кофе":
+        name = "Кофе"
+        emoji = "☕"
+        price = MONEY_ONE_COFFEE
+        summa = quantity_drink * MONEY_ONE_COFFEE
+    case "2" | "чай":
+        name = "Чай"
+        emoji = "🍵"
+        price = MONEY_ONE_TEA
+        summa = quantity_drink * MONEY_ONE_TEA
+    case "3" | "сок":
+        name = "Сок"
+        emoji = "🧃"
+        price = MONEY_ONE_JUICE
+        summa = quantity_drink * MONEY_ONE_JUICE
+    case "4" | "вода":
+        name = "Вода"
+        emoji = "🫗"
+        price = MONEY_ONE_WATER
+        summa = quantity_drink * MONEY_ONE_WATER
+    case "5" | "лимонад":
+        name = "Лимонад"
+        emoji = "🍹"
+        price = MONEY_ONE_LEMONADE
+        summa = quantity_drink * MONEY_ONE_LEMONADE
+    case _:
+        print("Ошибка. Вы ввели не корректное название товара")
+
+#Перевод слова ПОРЦИЯ, учитывая число
+if quantity_drink == 1:
+    quantity = "Порция"
+elif 2 <= quantity_drink <= 4:
+    quantity = "Порции"
+else:
+    quantity = "Порций"
+
+#Перевод на скидку
+match discount:
+    case "student":
+        discount_sum = 0.20
+    case "retiree":
+        discount_sum = 0.15
+    case "retiree":
+        discount_sum = 0.10
+    case " ":
+        discount_sum = 0
+    case _:
+        print("Ошибка. Код скидки не читаем")
+
+#Вычисление скидки в рублях
+discount_sum_rub = summa * discount_sum
+#Вычисление конечной суммы для оплаты
+summa_rub_drink = summa - discount_sum_rub
+
+#Красивый вывод
+print("=" * 40)
+print(f"    {emoji} Квитанция кафе {emoji}")
+print("=" *40 )
+print(f"Товар: {name} {emoji}")
+print(f"Цена за порцию: {price} руб")
+print(f"Количество: {quantity_drink} {quantity}")
+print(f"Сумма: {summa} руб")
+print()
+print(f"Скидка: {discount_sum_rub} руб")
+print("=" * 40)
+print(f"💵 К ОПЛАТЕ: {summa_rub_drink} руб")
+print("=" * 40)
