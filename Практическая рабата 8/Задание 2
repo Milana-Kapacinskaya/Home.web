@@ -1,6 +1,6 @@
 finish = "YES"
 for _ in range(10):
-    num = int(input())
+    num = int(input("Введите число:"))
     if num % 2 != 0:
         finish = "NO"
 print(finish)
