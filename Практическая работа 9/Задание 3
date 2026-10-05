@@ -3,13 +3,13 @@ COIN_5 = 5
 COIN_10 = 10
 COIN_25 = 25
 
-price_service = int(input("")) #Ввод цены за услугу ведьмака и начального положения счетчика
+price_service = int(input("Введите цену за услугу: ")) #Ввод цены за услугу ведьмака и начального положения счетчика
 sum_coins = 0
 
 while price_service > 0: #Цикл работает, пока число больше 0
     if price_service >= COIN_25: #Условие
         price_service -= 25
-        sum_coins += 1 #Увеличения счетчика 
+        sum_coins += 1 #Увеличения счетчика
     elif price_service >= COIN_10:
         price_service -= 10
         sum_coins += 1
@@ -19,4 +19,4 @@ while price_service > 0: #Цикл работает, пока число бол�
     else:
         price_service -= 1
         sum_coins += 1
-print(sum_coins) #Вывод количества монет
+print(f"Количество монет: {sum_coins} ") #Вывод количества монет
