@@ -1,0 +1,23 @@
+MONEY = 100
+balance = 1000
+
+while True:
+    operation = int(input("Введите номер операции (1 - узнать баланс, 2 - снять 100, 3 - положить 100, 4 - выйти из программы): "))
+
+    if operation == 1:
+        print(f"Ваш баланс {balance}")
+    elif operation == 2:
+        if balance >= MONEY:
+            balance -= MONEY
+            print("Снято")
+        else:
+            print("Недостаточно средств")
+    elif operation == 3:
+        balance += MONEY
+        print("Внесено")
+    elif operation == 4:
+        break
+    else:
+        print("Неверная команда, введите правильный номер операции")
+
+print("До свидания")
