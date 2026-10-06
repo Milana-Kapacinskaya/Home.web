@@ -1,0 +1,20 @@
+total = 0
+
+while True: #Цикл ввода цены товара и счет суммы
+    product_price = int(input("Введите цену товара: "))
+
+    if product_price == 0: #условие
+        break #остановка цикла
+    elif product_price < 0:
+        print("Цена не может быть отрицательной, введите корректное значение.")
+        continue #не включений в подсчет цикла
+    else:
+        total += product_price
+
+# Расчёт итоговой суммы со скидкой
+if total >= 1000:
+    final_price = total * 0.9  # скидка 10%
+else:
+    final_price = total  # без скидки
+
+print(f"Итоговая сумма: {final_price:.2f}")
