@@ -1,0 +1,44 @@
+num = int(input("Введите натуральное число: ")) #Ввод числа и начальных значений счетчика
+total_three = 0
+last_num = num % 10
+total_even = 0
+total_last = 0
+total_5 = 0
+total_7 = 1
+total_0_5 = 0
+task = 1
+original = num
+#Работа цикла
+while task <= 6:
+    num = original
+    while num > 0:
+        last = num % 10 #Определений последней цифры в числе
+#Проверка последнего числа и работа счетчика
+        if task == 1 and last == 3:
+            total_three += 1
+
+        elif task == 2 and last == last_num:
+            total_last += 1
+
+        elif task == 3 and last % 2 ==0:
+            total_even += 1
+
+        elif task == 4 and last > 5:
+            total_5 += last
+
+        elif task == 5 and last > 7:
+            total_7 *= last
+
+        elif task == 6 and (last == 5 or last == 0):
+            total_0_5 += 1
+
+#Определение других цифр в числе, кроме последнего
+        num = num // 10
+    task +=1
+#Вывод полученных данных
+print(f"Количество цифр 3 в числе: {total_three}")
+print(f"Количество последних цифр в числе:  {total_last}")
+print(f"Количество четных цифр в числе: {total_even}")
+print(f"Суммы цифр в числе, больше 5: {total_5}")
+print(f"Произведение цифр в чисел, больше 7: {total_7}")
+print(f"Суммарное количество 0 и 5 в числе: {total_0_5} ")
