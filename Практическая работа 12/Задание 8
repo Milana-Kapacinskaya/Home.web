@@ -1,0 +1,14 @@
+import random
+numbers = []
+for _ in range(5):
+    nums = [random.randint (1, 100)]
+    numbers += nums
+print(numbers)
+
+min_index = 0
+for i in range(len(numbers)): #Перебор индексов чисел из строки по количеству длины, последний индекс числа равен длине строки
+    if numbers [i] < numbers[min_index]: #Сравнение и определения мин числа, через обращение с помощью индексов
+        min_index = i
+
+numbers[0], numbers[min_index] = numbers[min_index], numbers[0] #Замена мин числа и первого числа в списке местами
+print(numbers)
