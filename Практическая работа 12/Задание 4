@@ -1,0 +1,11 @@
+marks = [5, 4, 3, 5, 2, 5, 4, 3, 5, 5]
+total_fives = 0
+total_two = 0
+for i in marks:
+    if i == 5:
+        total_fives += 1
+    elif i == 2:
+        total_two += 1
+
+print(f"Количество пятёрок - {total_fives}")
+print(f"Количество двоек - {total_two}")
