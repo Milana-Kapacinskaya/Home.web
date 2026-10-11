@@ -1,0 +1,6 @@
+prices = [1500, 500, 2000, 3500, 1000, 4500]
+print(max(prices))
+print(min(prices))
+print(sum(prices))
+sr_price = sum(prices) / len(prices)
+print(f"{sr_price:.2f}")
