@@ -1,0 +1,6 @@
+users = ['Admin', 'Guest', 'User', 'Bot']
+users[2] = 'Moderator'
+users[-1] = 'SuperAdmin'
+users_1 = ['Newbie']
+users_2 = users + users_1
+print(users_2)
