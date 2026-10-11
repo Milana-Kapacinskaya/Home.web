@@ -1,0 +1,6 @@
+word = list(input("Введите одно слово: "))
+word_2 = word[::-1]
+if word == word_2:
+    print("Это палиндром")
+else:
+    print("Не палиндром")
