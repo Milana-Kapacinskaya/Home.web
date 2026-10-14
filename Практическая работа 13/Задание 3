@@ -1,0 +1,5 @@
+name = input("Введите название файла: ") #Ввод названия файл
+results = name.split("\\") #Разбивает строку по \
+
+for result in results: #Разделение строки на элементы
+    print(result)
