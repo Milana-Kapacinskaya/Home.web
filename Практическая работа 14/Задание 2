@@ -1,0 +1,26 @@
+from random import randint
+N = 3
+list_num = []
+
+for i in range(N):
+    str_num = []
+    for j in range(randint(1, 5)):
+        str_num.append(randint(1, 100))
+    list_num.append(str_num)
+
+print(list_num)
+
+total = 0
+max_row_sum = 0
+max_row = 0
+for row in list_num: #Рассматривание каждой строки списка
+    s = sum(row) #Нахождение суммы всех элементов каждой строки
+    print(f"{s} - сумма элементов списка {row}")
+    if s > max_row_sum: #Нахождение макс суммы и присваивание макс значения
+        max_row_sum = s
+        max_row = row
+
+    total += s #Нахождение суммы списка всех строк, состоящей из всех элементов
+
+print(f"Максимальная сумма - {total}")
+print(f"Строка {max_row} с максимальной суммой {max_row_sum}")
