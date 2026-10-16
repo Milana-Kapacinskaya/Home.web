@@ -1,0 +1,28 @@
+from random import randint
+
+N = 3      # Количество списков в списке
+SIZE = 4   # Количество элементов в каждом списке
+
+numbers = []
+for i in range(N):
+    numbers_1 = []
+    for j in range(SIZE):
+        numbers_1.append(randint(1, 100))
+    numbers.append(numbers_1)
+
+print(numbers)
+
+# Инициализация максимума первым элементом
+max_num = numbers[0][0]
+max_row = 0 #Присвоение индекса строки 0
+max_col = 0 #Присвоение индекса элемента в строке 0
+
+for i in range(N): #Перечисление по каждому строке
+    for j in range(SIZE): #Перебор по каждому элементу в строке
+        if numbers[i][j] > max_num:   # сравнение с текущим максимумом
+            max_num = numbers[i][j] #Проверка числа по номеру индексов на макс значение
+            max_row = i #Присвоение индексов
+            max_col = j
+
+print(f"{max_num} - максимальное число во вложенном списке "
+      f"({max_row} - индекс его строки и {max_col} - индекс его элемента)")
