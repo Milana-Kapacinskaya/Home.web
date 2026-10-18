@@ -1,0 +1,28 @@
+price = list(map(int, input().split()))
+
+# Сохраняем оригинал как отдельную копию
+original = price.copy()
+
+#Сортировка по возрастанию (пузырьковая)
+asc = price.copy()
+n = len(asc)
+for i in range(n - 1):
+    for j in range(n - i - 1):
+        if asc[j] > asc[j + 1]:
+            asc[j], asc[j + 1] = asc[j + 1], asc[j]
+
+print(f"Сортировка по возрастанию: {asc}")
+
+#Сортировка по убыванию (пузырьковая)
+desc = price.copy()
+m = len(desc)
+for i in range(m - 1):
+    for j in range(m - i - 1):
+        if desc[j] < desc[j + 1]:
+            desc[j], desc[j + 1] = desc[j + 1], desc[j]
+
+print(f"Сортировка по убыванию: {desc}")
+
+# Оригинальный и обратный порядок
+print(f"Оригинальный порядок (от старых к новым): {original}")
+print(f"Обратный порядок (от новых к старым): {original[::-1]}")
