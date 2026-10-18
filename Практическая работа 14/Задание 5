@@ -1,0 +1,15 @@
+N = int(input())#Считываем вместимость рюкзака
+price_product = input()#Ценность
+
+price_list = list(map(int, price_product.split()))
+price_list.sort(reverse=True)       #Сортируем по убыванию
+
+sum_price = 0
+total = 0
+
+for i in price_list:
+    if total < N and i > 0:         # берём только положительные ценности, пока есть место
+        total += 1
+        sum_price += i
+
+print(sum_price)
