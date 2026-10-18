@@ -1,0 +1,18 @@
+from random import randint
+numbers = []
+for i in range (randint(1, 5)):
+    num = []
+    for j in range (randint(1, 10)):
+        num.append(randint(-100, 100))
+    numbers.append(num)
+print(f"Исходный список: {numbers}")
+
+new_numbers = []
+for n in numbers:
+    new_num = []
+    for num_1 in n:
+        if num_1 > 0:
+            new_num.append(num_1)
+    new_numbers.append(new_num)
+
+print(f"Отсортированный список: {new_numbers}")
