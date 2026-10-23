@@ -1,0 +1,44 @@
+#1 Этап
+flower = 'Роза красный крупный 50, Тюльпан жёлтый маленький 30, Пион розовый средний 60'
+plants = flower.split(', ')
+print("Растения на ферме: ")
+for plant in plants:
+    print(plant)
+
+#2 Этап
+hybrid = 'Роза+Тюльпан=Розтюль; Пион+Ромашка=Пиомашка'
+flow_1, flow_2 = input("Введите 2 растения для смешивания через пробел и с заглавной буквы: ").split()
+hybrids = hybrid.split('; ')
+for h in hybrids:
+    pair_h, result = h.split('=')
+    fl_1, fl_2 = pair_h.split('+')
+    if (flow_1 == fl_1 and flow_2 == fl_2) or (flow_1 == fl_2 and flow_2 == fl_1):
+        print(f"Получен гибрид: {result}")
+
+print("Эти растения нельзя скрестить")
+
+#3.1 Этап
+plant_1 = input("Введите название 1 родительского растения:")
+color_plant_1, size_plant_1, growth_plant_1= input("Введите цвет, размер, рост 1 родительского растения через пробелы и с заглавной буквы: ")
+plant_2 = input("Введите название 1 родительского растения:")
+color_plant_2, size_plant_2, growth_plant_2= input("Введите цвет, размер, рост 1 родительского растения через пробелы и с заглавной буквы: ")
+if plant_1 < plant_2:
+    print(f"Гибрид будет {color_plant_1}")
+elif plant_1 == plant_2:
+    print(f"Гибрид будет {color_plant_1}")
+else:
+    print(f"Гибрид будет {color_plant_2}")
+
+#3.2
+if size_plant_1 == size_plant_2:
+    print(f"Гибрид будет {size_plant_1}")
+elif size_plant_1 < size_plant_2:
+    print(f"{size_plant_1}/{size_plant_2}")
+else:
+    print(f"{size_plant_2}/{size_plant_1}")
+
+#3.3
+if growth_plant_1 > growth_plant_2:
+    print(f"Гибрид будет {growth_plant_2}")
+else:
+    print(f"Гибрид будет {growth_plant_1}")
