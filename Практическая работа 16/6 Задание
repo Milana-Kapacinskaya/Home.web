@@ -1,0 +1,13 @@
+staff = []
+for i in range(11):
+    staff.append(str(i))  
+staff = set(staff)
+
+department_1 = set(input("Введите номер сотрудника, кто был на работе: ").split())
+department_2 = set(input("Введите номер сотрудника, кто был на работе: ").split())
+department_3 = set(input("Введите номер сотрудника, кто был на работе: ").split())
+
+general_work = department_1 | department_2 | department_3
+ghosts = staff - general_work
+
+print("Рабочие призраки:", *ghosts)
