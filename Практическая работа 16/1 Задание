@@ -1,0 +1,5 @@
+word = input("Введите слова: ").split()
+word_set = set(word)
+
+print("Количество: ", len(word_set))
+print("Слова:", *sorted(word_set))
