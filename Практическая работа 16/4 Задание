@@ -1,0 +1,7 @@
+intelligence_1 = set(input("Введите имена работников: ").split())
+intelligence_2 = set(input("Введите имена работников: ").split())
+intelligence_3 = set(input("Введите имена работников: ").split())
+
+agents = (intelligence_1 & intelligence_2) - intelligence_3
+
+print(*sorted(agents, reverse = True))
