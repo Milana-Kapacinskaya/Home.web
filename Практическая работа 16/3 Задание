@@ -4,5 +4,5 @@ server_В = set(input("Введите имена файлов: ").split())
 general = server_A & server_В
 lost = server_A.difference(server_В)
 
-print("Общие: ", *general)
-print("Потерянные: ", *lost)
+print("Общие: ", *sorted(general))
+print("Потерянные: ", *sorted(lost))
