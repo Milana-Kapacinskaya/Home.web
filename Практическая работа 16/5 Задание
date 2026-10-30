@@ -1,0 +1,9 @@
+address_1 = set(input("Введите ID адрес: ").split())
+address_2 = set(input("Введите ID адрес: ").split())
+address_3 = set(input("Введите ID адрес: ").split())
+
+general = address_1 & address_2 & address_3
+unification = address_1 | address_2 | address_3
+result = unification - general
+
+print(result)
