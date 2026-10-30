@@ -1,0 +1,8 @@
+allowed = set(input("Введите базу айди: ").split())
+incoming = set(input("Введите данные для проверки на айди: ").split())
+
+for check in incoming:
+    if check in allowed:
+        print("OK")
+    else:
+        print("ADDED")
