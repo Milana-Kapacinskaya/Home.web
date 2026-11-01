@@ -1,0 +1,14 @@
+group_1 = {'Иван', 'Мария', 'Петр', 'Сергей', 'Анна'}
+group_2 = {'Мария', 'Анна', 'Дмитрий', 'Елена', 'Сергей'}
+
+attendance_1 = group_1.intersection(group_2)
+attendance_2 = group_1.difference(group_2)
+attendance_3 = group_2.difference(group_1)
+attendance_4 = group_1.union(group_2)
+attendance_5 = group_1.symmetric_difference(group_2)
+
+print(f"Студенты ходят в обе группы: {attendance_1} ")
+print(f"Студенты ходят только в первую группу: {attendance_2}")
+print(f"Студенты ходят только в вторую группу: {attendance_3}")
+print(f"Студенты ходят хотя бы в одну группу: {attendance_4}")
+print(f"Студенты ходят в только в одну группу: {attendance_5}")
