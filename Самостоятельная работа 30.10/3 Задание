@@ -1,0 +1,16 @@
+require = {'Python', 'SQL', 'Git', 'Docker'}
+candidate_1 = {'Python', 'SQL', 'Git', 'Docker', 'Kubernetes'}
+candidate_2 = {'Python', 'SQL', 'JavaScript'}
+candidate_3 = {'Python', 'SQL', 'Git', 'HTML/CSS'}
+
+print("Есть ли все навыки?", require.issubset(candidate_1)) 
+print("Отсутствуют главные навыки:", require.difference(candidate_1))
+print("Дополнительные навыки:", candidate_1.difference(require))
+
+print("Есть ли все навыки?", require.issubset(candidate_2))
+print("Отсутствуют главные навыки:", require.difference(candidate_2))
+print("Дополнительные навыки:", candidate_2.difference(require))
+
+print("Есть ли все навыки?", require.issubset(candidate_3))
+print("Отсутствуют главные навыки:", require.difference(candidate_3))
+print("Дополнительные навыки:", candidate_3.difference(require))
