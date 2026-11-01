@@ -1,0 +1,12 @@
+word_1 = set(input("Введите слово: "))
+word_2 = set(input("Введите слово: "))
+
+attendance_1 = word_1 & word_2
+attendance_2 = word_1.difference(word_2)
+attendance_3 = word_2.difference(word_1)
+attendance_4 = word_1 | word_2
+
+print(f"Общие: {attendance_1}")
+print(f"Только в первом: {attendance_2}")
+print(f"Только во втором: {attendance_3}")
+print(f"Все буквы: {attendance_4}")
